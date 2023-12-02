@@ -122,6 +122,9 @@ PRODUCT_PACKAGES += \
     bootanimation.zip \
     bootanimation-dark.zip
 
+# Certification
+$(call inherit-product-if-exists, vendor/certification/config.mk)
+
 # Lineage packages
 ifeq ($(PRODUCT_IS_ATV),)
 PRODUCT_PACKAGES += \
