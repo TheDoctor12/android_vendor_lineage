@@ -160,6 +160,13 @@ endif
 PRODUCT_PACKAGES += \
     framework_compatibility_matrix.lineage.xml
 
+# Disable async MTE on a few processes
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    persist.arm64.memtag.app.com.android.se=off \
+    persist.arm64.memtag.app.com.google.android.bluetooth=off \
+    persist.arm64.memtag.app.com.android.nfc=off \
+    persist.arm64.memtag.process.system_server=off
+
 # Lineage packages
 ifeq ($(LINEAGE_BUILD),true)
 ifeq ($(PRODUCT_IS_ATV),)
