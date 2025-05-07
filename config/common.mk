@@ -128,7 +128,7 @@ endif
 
 # Enforce privapp-permissions whitelist
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.control_privapp_permissions=enforce
+    ro.control_privapp_permissions=log
 
 TARGET_DISABLE_LINEAGE_SDK = true
 ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
