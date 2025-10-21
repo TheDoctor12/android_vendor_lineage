@@ -296,9 +296,10 @@ endif
 
 # Root
 ifneq ($(TARGET_BUILD_VARIANT),user)
+ifeq ($(WITH_SU),true)
 PRODUCT_PACKAGES += \
     adb_root
-ifeq ($(WITH_SU),true)
+
 PRODUCT_PACKAGES += \
     su
 
